@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Comprador - Market CO</title>
+    <link rel="stylesheet" href="Style2.css">
+</head>
+<body>
+    <header>
+        <h1>Market CO</h1>
+        <nav>
+            <ul class="menu">
+                <li><a href="#profile">Perfil</a></li>
+                <li><a href="#orders">Pedidos</a></li>
+                <li><a href="#upload">Subir Artículos</a></li>
+                <li><a href="#logout">Cerrar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="articles">
+            <h2>Mis Artículos</h2>
+            <div class="articles-list">
+                <!-- Aquí se cargarán los artículos dinámicamente -->
+            </div>
+        </section>
+        
+        <section id="profile" class="hidden">
+            <h2>Mi Perfil</h2>
+            <p>Información del perfil del comprador.</p>
+        </section>
+        
+        <section id="orders" class="hidden">
+            <h2>Pedidos Recibidos</h2>
+            <p>Listado de pedidos realizados a tus artículos.</p>
+        </section>
+        
+        <section id="upload" class="hidden">
+            <h2>Subir Nuevo Artículo</h2>
+            <form id="uploadForm">
+                <label for="title">Título:</label>
+                <input type="text" id="title" name="title" placeholder="Nombre del artículo" required>
+                
+                <label for="description">Descripción:</label>
+                <textarea id="description" name="description" placeholder="Descripción del artículo" required></textarea>
+                
+                <label for="price">Precio:</label>
+                <input type="number" id="price" name="price" placeholder="Precio en USD" required>
+                
+                <label for="image">Imagen:</label>
+                <input type="file" id="image" name="image" accept="image/*" required>
+                
+                <button type="submit">Subir Artículo</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Market CO - Todos los derechos reservados.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
